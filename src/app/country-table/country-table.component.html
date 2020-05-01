@@ -1,0 +1,21 @@
+
+<table class="table" *ngIf="countryInformation.length >0" style="margin-top: 20px; width: 800px; " align="center">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Population</th>
+        <th scope="col">currency</th>
+        <th scope="col">Flag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="width: 30px;height: 30px;" *ngFor="let country of countryInformation">
+        <td scope="row">{{country.name}}</td>
+        <td scope="row">{{country.capital}}</td>
+        <td scope="row">{{country.population}}</td>
+        <td scope="row">{{country.currencies[0].name}}</td>
+        <td scope="row"><img style="width: 30px;height: 30px;" [src]="country.flag"/></td>
+      </tr>
+    </tbody>
+  </table>

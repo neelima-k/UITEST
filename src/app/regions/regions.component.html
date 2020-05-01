@@ -1,0 +1,17 @@
+<div class="container " style="padding-top: 10%; padding-left: 20%;">
+    <div class="row">
+        <div class="col-sm-8 col-md-8 collg-8"  style="text-align: center;padding:3%">
+            Countries List
+        </div>
+        <div class="col-sm-8 col-md-8 collg-8">
+       
+            <app-dropdown [itemsList]="items" labelName="Regions" (valueChange)="changedRegion($event)"></app-dropdown>
+
+        </div>
+        <div class="col-sm-8 col-md-8 collg-8" *ngIf="displayDiv">
+
+            <app-dropdown [itemsList]="countryList" labelName="Countries"  (valueChange)="changedCountry($event)"></app-dropdown>
+
+        </div>
+        </div>
+    </div>
